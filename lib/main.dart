@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_depi/Completed%20Todo%20page.dart';
 import 'package:todo_depi/ToDo%20page.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'TODO app',
-      home: TodoPage(),
+      home: CompletedTodoPage(),
     );
   }
 }
