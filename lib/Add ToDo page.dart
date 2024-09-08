@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todo_depi/Constants.dart';
 
-class AddTODOPage extends StatelessWidget {
-  const AddTODOPage({super.key});
+class AddTodoPage extends StatelessWidget {
+  const AddTodoPage({super.key});
 
   @override
   Widget build(BuildContext context) {

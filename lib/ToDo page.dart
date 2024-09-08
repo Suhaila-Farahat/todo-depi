@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_depi/Add%20ToDo%20page.dart';
 import 'package:todo_depi/Constants.dart';
+import 'package:todo_depi/Edit%20Todo%20Page.dart';
 
 class TodoPage extends StatelessWidget {
   const TodoPage({super.key});
@@ -58,7 +59,10 @@ class TodoPage extends StatelessWidget {
                           Row(
                             children: [
                               IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) =>EditTodoPage()));
+
+                                  },
                                   icon: Icon(
                                     Icons.mode_edit_outline_outlined,
                                     color: defaultColor,
@@ -94,7 +98,7 @@ class TodoPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: defaultColor,
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) =>AddTODOPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) =>AddTodoPage()));
         },
         child: const Icon(
           Icons.add,
