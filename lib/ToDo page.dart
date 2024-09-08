@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_depi/Add%20ToDo%20page.dart';
 import 'package:todo_depi/Constants.dart';
 
 class TodoPage extends StatelessWidget {
@@ -15,10 +16,12 @@ class TodoPage extends StatelessWidget {
         ),
         backgroundColor: defaultColor,
       ),
+
+
       body: ListView.builder(
         itemBuilder: (BuildContext context, int index) => Card(
           elevation: 5,
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
               top: 10,
               right: 12,
               left: 12
@@ -42,10 +45,10 @@ class TodoPage extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: defaultColor),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
-                              Text(
+                              const Text(
                                 "TODO Sub Title",
                                 style: TextStyle(
                                     fontSize: 12, color: Colors.black),
@@ -90,8 +93,10 @@ class TodoPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: defaultColor,
-        onPressed: (){},
-        child: Icon(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) =>AddTODOPage()));
+        },
+        child: const Icon(
           Icons.add,
         ),
       ),
